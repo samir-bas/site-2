@@ -1,0 +1,189 @@
+* {
+    /* Remove the padding and margin of all elements  */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* use all the space  */
+    min-height: 100vh;
+    /* la position relative et la position absolue vont de pair il faut que le parent soit en position relative et l'enfant absolue */
+    position: relative;
+    font-family: 'Dosis', sans-serif;
+}
+
+img {
+    /* the image will be put on the whole container */
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    margin-left: 3rem;
+}
+
+/* Header */
+header {
+    background-color: #f1f1f1;
+}
+
+.header-main {
+    height: 8vh;
+    display: flex;
+    /* the elements are disposed in row one after the other (the default value)  */
+    flex-direction: row;
+    /* we define the spacing between the elements (space-evenly: the spacing is the same for all the elements left and right) */
+    justify-content:space-between;
+    /* Alignement des éléments par rapport à la verticale du conteneur */
+    align-items: center;
+    /* if the elements are too long to be contaied on the same line a new line is created */
+    flex-wrap: wrap;
+}
+.header-main nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.header-main nav ul li a {
+    text-decoration:none;
+    margin-right: 1.5rem;
+}
+
+.header-main nav li a:hover {
+    font-weight: bold;
+}
+
+.p-header-main {
+    padding-right: .5rem;
+}
+
+.header-footer {
+   text-align: center;
+   font-size: 1rem;
+   font-weight: bold;
+}
+
+.header-footer h1 {
+    color: #424ece;
+    letter-spacing: 2px;
+    margin: 0 0 1rem 0;
+}
+
+.header-footer p {
+    padding-bottom: .5rem;
+}
+
+/* MAIN */
+
+.separate-ligne  {
+    border-top: 3px solid #424ece;
+    margin: 3rem 12rem;
+}
+
+.product {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    margin: 3rem;
+}
+
+.p-main h1, .title h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.main-article {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.header-article {
+    /* l'image occupée dans le conteneur */
+    width: 10rem;
+    height: 10rem;
+    margin: 2px;
+    background-color: black;
+    position: relative;
+}
+
+.header-article img {
+    z-index: 1;
+}
+
+.header-article section {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* background-color: black; */
+    opacity: 0.5;
+    transition: height 1s;
+}
+
+.header-article:hover section {
+    height: 0px;
+}
+
+.footer-article h2 {
+    font-size: 1rem;
+    margin: .5rem 0;
+}
+
+.price {
+    margin: .5rem 0;
+}
+
+.main-article a {
+    text-decoration: none;
+    /* remove the default color of hypertext */
+    color: inherit;
+}
+
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height: 2.5rem;
+    margin: 3.5rem 0;
+}
+
+/* ABOUT */
+
+.about p {
+    text-align:justify;
+    margin: 2rem 5rem;
+}
+
+.about h2 {
+    margin: 2rem 5rem;
+}
+
+/* Single Article */
+
+.single-article-container {
+    display: flex;
+    padding: 1.5rem 0;
+}
+
+.single-article-container * {
+    padding: .5rem 0;
+}
+
+.single-article-img {
+    width: 25%;
+}
+
+.single-article-description {
+    width: 75%;
+}
+
+.contact-form * {
+    display: block;
+    margin: .5rem 0 0 4rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
